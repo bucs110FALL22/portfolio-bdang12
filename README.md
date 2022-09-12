@@ -10,8 +10,8 @@ Welcome to CS 110. I look forward to working with you this semester. This is you
 
 ## Student Info - MUST BE COMPLETED
 
-Preferred Name:Binh
+Preferred Name:Binh Dang
 
 Discord username:Dang Quoc Binh
 
-REPL url:https://replit.com/@bdang2/portfolio-bdang12#README.md
+REPL url:https://replit.com/join/cfpqylhagv-bdang2
