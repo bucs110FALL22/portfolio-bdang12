@@ -18,7 +18,8 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
 ## 5. Your PART A code goes here
-
+michelangelo.goto(100,-20)
+leonardo.goto(100,20)
 
 # PART B - complete part B here
 

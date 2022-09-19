@@ -1,4 +1,4 @@
-
+import random
 #Part A
 weeks = 16
 classes = 5
@@ -18,7 +18,6 @@ print("cost_per_class", type(cost_per_class))
 
 
 #Part B
-import random
 list = [1,2,3,4,5]
 rand = random.choice(list)
 print(rand)
