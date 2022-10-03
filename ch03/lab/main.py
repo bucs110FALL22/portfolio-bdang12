@@ -5,7 +5,7 @@ import random
 window = turtle.Screen() # 2.  Create a screen
 window.bgcolor('lightblue')
 
-michelangelo = turtle.Turtle() # 3.  Create two turtles
+michelangelo = turtle.Turtle() #cd  3.  Create two turtles
 leonardo = turtle.Turtle()
 michelangelo.color('orange')
 leonardo.color('blue')
