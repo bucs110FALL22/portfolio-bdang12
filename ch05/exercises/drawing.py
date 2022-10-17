@@ -2,7 +2,7 @@ import turtle
 def drawEqShape(turtle,num_side, len_side):
   for i in range(num_side):
     bill.forward(len_side)
-    bill.left(360/num_side)
+    bill.right(360/num_side)
 
 bill=turtle.Turtle()
 bill.shape("turtle")
