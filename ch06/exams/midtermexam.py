@@ -1,0 +1,25 @@
+import turtle
+def Circle(turtle,x,y):
+  bill.circle(x,y)
+bill=turtle.Turtle()
+bill.shape("turtle")
+bill.color("green")
+def Letter(turtle,forward,left):
+  Circle(bill,80,180)
+  bill.lt(left)
+  bill.fd(forward)
+  bill.lt(left)
+  Circle(bill,80,140)
+def main():
+  bill.penup()
+  bill.goto(0,-100)
+  bill.pendown()
+  bill.pensize(15)
+  Circle(bill,200,360)
+  bill.penup()
+  bill.goto(-20,100)
+  bill.pendown()
+  bill.pensize(20)
+  Letter(bill,290,90)
+  turtle.exitonclick()
+main()
