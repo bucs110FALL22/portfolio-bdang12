@@ -1,5 +1,5 @@
 from enum import Enum
-from bomb import Bomb
+
 class Direction(Enum):
   UP = 0
   DOWN = 1
@@ -13,12 +13,10 @@ class Snake:
   block_size = None
   color = (0,0,255)
   bounds = None
-  
 
-  def __init__(self, block_size, bounds,bomb):
+  def __init__(self, block_size, bounds):
     self.block_size = block_size
     self.bounds = bounds
-    self.bomb= bomb
     self.respawn()
 
   def respawn(self):
@@ -56,13 +54,22 @@ class Snake:
       elif self.direction == Direction.RIGHT and direction != Direction.LEFT:
         self.direction = direction
   def eat(self):
-      self.length += 1
+      self.length += 0
   def check_for_food(self, food):
       head = self.body[-1]
       if head[0] == food.x and head[1] == food.y:
         self.eat()
         food.respawn()
- 
+  def check_tail_collision(self):
+      head = self.body[-1]
+      has_eaten_tail = False
+  
+      for i in range(len(self.body) - 1): 
+        segment = self.body[i]
+        if head[0] == segment[0] and head[1] == segment[1]:
+          has_eaten_tail = True
+  
+      return has_eaten_tail
   def check_bounds(self):
       head = self.body[-1]
       if head[0] >= self.bounds[0]:
@@ -76,11 +83,3 @@ class Snake:
           return True  
   
       return False
-    
-  def checkbomb(self):
-      head = self.body[-1]
-      if head[0] == self.bomb[0] and head[1] == self.bomb[1]:
-        return True
-  
-      
-        
