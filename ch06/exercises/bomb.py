@@ -1,19 +1,21 @@
-
-from random import choice
+import pygame
+import random
 class Bomb:
-    def __init__(self, pos, *grps):
-        super().__init__(*grps)
-        self.image = pygame.Surface((32, 32))
-        self.image.fill(choice(['red', 'yellow', 'green']))
-        self.rect = self.image.get_rect(topleft=pos)
-        
-    def update(self, dt, events):
-        self.rect.move_ip(0, 400 * dt)
-        display_rect = pygame.display.get_surface().get_rect()
-        if self.rect.top > display_rect.bottom:
-            self.kill()
-    
-    
-    
-  
-  
+    block_size = None
+    color = (0,0,0)
+  #Set the bomb location
+    #x = 150; 
+    #y = 0; 
+
+    def __init__(self, x, y):
+      self.image = pygame.Surface((200, 350))
+      self.rect=self.image.get_rect()
+      self.direction= "UP"        
+      self.rect.x = x
+      self.rect.y = y
+#Draw a bomb
+    def draw(self, game, window):
+        game.draw.rect(window, self.color, (self.rect.x, self.rect.y, self.block_size, self.block_size))
+    def update(self):
+      self.rect.y = self.rect.y - 1
+      self.rect.x=random.randrange(-1, 2)
