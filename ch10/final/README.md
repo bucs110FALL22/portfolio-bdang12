@@ -1,12 +1,13 @@
 # CS110 Final Exam
 
 ## SHORT DESCRIPTION *(1 or 2 sentences describing your program)*
-In the HoldayAPi print out the data about Christmas Holiday.
+In the CompanyAPi print out the data about Comapny:name,domain,year,type,emoloy_num,location and url.
 And the Apple bot will show the right Ip or fake Ip and it will print out the RIght Ip and True or it will print the fake Ip and False.
 ## KNOWN BUGS AND INCOMPLETE PARTS *(list any known bugs or non-working parts)*
+There are some area while I try to import out all of the values of the keys in the dict, but at the end, it run smoothly
 There are some bugs while I try to input the IP to the url variable, but at the end it actually work. 
 ## REFERENCES *(any resources you use outside of class materials)*
-https://holidays.abstractapi.com
+https://app.abstractapi.com/dashboard
 https://applebot.seoapi.com
 
 

@@ -1,8 +1,8 @@
-import HolidayAPI
+import CompanyAPI
 import ApplebotAPI
 def main():
     #Proxy Class
-  result=HolidayAPI.HolidayAPI()
+  result=CompanyAPI.CompanyAPI()
   result.get()
   result2=ApplebotAPI.ApplebotAPI()
   result2.get()
